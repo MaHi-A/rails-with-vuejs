@@ -1,9 +1,15 @@
 <template>
-  <h1>Hello welcome to Vue JS</h1>
+  <h1 @click="printConsole" id="welcome"> Hello User..!</h1>
 </template>
 
 <script>
-export default {
-  name: 'welcome-show'
-}
+  import Vue from 'vue'
+  export default {
+    name: 'welcome-show',
+    methods: {
+      printConsole() {
+        console.log('You have clicked me............!')
+      }
+    }
+  }
 </script>
