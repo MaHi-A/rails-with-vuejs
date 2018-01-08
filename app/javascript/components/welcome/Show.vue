@@ -6,9 +6,17 @@
     <div >
     <ol>
       <li v-for="todo in todos">
-        {{todo.text}}
+        <input type="text" v-model="todo.text">
       </li>
     </ol>
+
+    <div>
+      <ol>
+        <li v-for="todo in todos">
+          {{todo.text}}
+        </li>
+      </ol>
+    </div>
   </div>
   </div>
 </template>
