@@ -18,6 +18,10 @@
       </ol>
     </div>
   </div>
+
+  <div>
+    <p v-html="rawHtml"></p>
+  </div>
   </div>
 </template>
 
@@ -34,8 +38,9 @@
         todos: [
         { text: 'Learn JavaScript'},
         { text: 'Learn VueJs'},
-        { text: 'Build something awesome'},
-        ]
+        { text: 'Build something awesome'}
+        ],
+        rawHtml: '<span style="color: red">This should be red.</span>'
       }
     },
     methods: {
