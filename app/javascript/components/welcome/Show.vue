@@ -1,3 +1,9 @@
+<style>
+  .active {
+    background-color: black;
+  }
+</style>
+
 <template>
   <div>
     <h1 @click="printConsole" id="welcome" :title="message2">{{ message }}</h1>
@@ -18,8 +24,7 @@
       </ol>
     </div>
   </div>
-
-  <div>
+  <div :class="{active: isActive}">
     <p v-html="rawHtml"></p>
   </div>
   </div>
@@ -30,7 +35,7 @@
   export default {
     name: 'welcome-show',
     data: function(){
-      return { 
+      return {
         message: 'Hello welcome to Vue JS..!',
         message2: 'Thank you for hovering...!',
         show: true,
@@ -40,7 +45,8 @@
         { text: 'Learn VueJs'},
         { text: 'Build something awesome'}
         ],
-        rawHtml: '<span style="color: red">This should be red.</span>'
+        rawHtml: '<span style="color: red">This should be red.</span>',
+        isActive: true
       }
     },
     methods: {
